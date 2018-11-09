@@ -1,0 +1,32 @@
+= Asciidoctor CJK Breaks
+Kaizhao Zhang
+
+Asciidoctor CJK Breaks is an extension for Asciidoctor that suppresses line breaks between east asian characters.
+
+Normally newlines in a asciidoc text get rendered as newlines in output html text. Then browsers will usually render those newlines as whitespace (more smart behavior is included in w3c drafts, but not actually implemented by vendors).
+
+This extension finds and removes newlines that cannot be converted to space, algorithm matches https://www.w3.org/TR/css-text-3/#line-break-transform[CSS Text Module Level 3]:
+
+- If the character immediately before or immediately after the segment break is the zero-width space character (U+200B), then the break is removed, leaving behind the zero-width space.
+- Otherwise, if the East Asian Width property [UAX11] of both the character before and after the segment break is F, W, or H (not A), and neither side is Hangul, then the segment break is removed.
+- Otherwise, the segment break is converted to a space (U+0020).
+
+---
+
+This is a Ruby port of https://github.com/markdown-it/markdown-it-cjk-breaks[markdown-it-cjk-breaks].
+
+Status: https://github.com/markdown-it/markdown-it-cjk-breaks/commit/15c7a4144e0e6f94fada671a6eb2c7b63e2358f0[15c7a41]
+
+== Install
+
+ $ gem install asciidoctor_cjk_breaks
+
+== Usage
+
+ $ asciidoctor -r asciidoctor_cjk_breaks example.adoc
+
+== Test
+
+ $ ruby test/test_cjk_breaks.rb
+
+And then open the converted HTML files in `test/fixtures` directory.

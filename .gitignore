@@ -1,0 +1,6 @@
+/Gemfile.lock
+/.bundle
+/*.gem
+/.ruby-gemset
+/.ruby-version
+/test/fixtures/*.html

@@ -1,0 +1,1 @@
+require_relative 'asciidoctor/cjk_breaks_treeprocessor'

@@ -1,0 +1,72 @@
+Remove linebreaks near ZWSP
+.
+foo​
+bar
+​baz
+.
+<p>foo​bar​baz</p>
+.
+
+Remove linebreaks between hiragana (wide) characters
+.
+あおえ
+いう
+.
+<p>あおえいう</p>
+.
+
+Remove linebreaks between halfwidth katakana
+.
+ｱｵｴ
+ｲｳ
+.
+<p>ｱｵｴｲｳ</p>
+.
+
+Remove linebreaks between fullwidth characters
+.
+！＂＃
+＄％
+.
+<p>！＂＃＄％</p>
+.
+
+Keep linebreaks between hangul characters
+.
+ㅏㅗㅔ
+ㅣㅜ
+ￂￌￇ
+ￜￓ
+.
+<p>ㅏㅗㅔ
+ㅣㅜ
+ￂￌￇ
+ￜￓ</p>
+.
+
+Keep linebreaks between hiragana (wide) and english
+.
+あおえ
+aoe
+あおえ
+.
+<p>あおえ
+aoe
+あおえ</p>
+.
+
+Emphasis tokens should be skipped
+.
+*あおえ*
+*いう*
+.
+<p><em>あおえ</em><em>いう</em></p>
+.
+
+Should recognize astral characters correctly
+.
+foo🈀
+🈀foo
+.
+<p>foo🈀🈀foo</p>
+.
