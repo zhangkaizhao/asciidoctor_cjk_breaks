@@ -23,7 +23,18 @@ Status: https://github.com/markdown-it/markdown-it-cjk-breaks/commit/15c7a4144e0
 
 == Usage
 
+In command line:
+
  $ asciidoctor -r asciidoctor_cjk_breaks example.adoc
+
+In Ruby:
+
+[source, ruby]
+--------------
+require 'asciidoctor_cjk_breaks'
+
+Asciidoctor.convert_file filepath
+--------------
 
 == Test
 
