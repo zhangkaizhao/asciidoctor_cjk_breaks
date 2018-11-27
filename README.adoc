@@ -15,7 +15,7 @@ This extension finds and removes newlines that cannot be converted to space, alg
 
 This is a Ruby port of https://github.com/markdown-it/markdown-it-cjk-breaks[markdown-it-cjk-breaks].
 
-Status: https://github.com/markdown-it/markdown-it-cjk-breaks/commit/15c7a4144e0e6f94fada671a6eb2c7b63e2358f0[15c7a41]
+Status: https://github.com/markdown-it/markdown-it-cjk-breaks/commit/26744838965b07ed5853031461600890b57238f7[2674483]
 
 == Install
 
