@@ -10,7 +10,9 @@ Gem::Specification.new do |s|
                    'lib/asciidoctor/cjk_breaks_treeprocessor.rb',
                    'test/test_cjk_breaks.rb',
                    'test/fixtures/cjk_breaks.txt',
-                   'test/fixtures/tengwanggexu-wangbo.txt']
+                   'test/fixtures/tengwanggexu-wangbo.txt',
+                   'test/fixtures/dlist.txt',
+                   'test/fixtures/table.txt']
   s.homepage    = 'https://github.com/zhangkaizhao/asciidoctor_cjk_breaks'
   s.license     = 'MIT'
 
