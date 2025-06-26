@@ -25,12 +25,9 @@ class CjkBreaksTreeprocessor < Asciidoctor::Extensions::Treeprocessor
 
   def remove_cjk_breaks(block)
     content_changed = false
-    # Processing after raw_source -> block.lines -> block.content in asciidoctor.
-    # It may be better to make this process while the process from raw_source -> block.lines
-    # whose code flow is:
-    # -> `Asciidoctor::Block.initialize`
-    # -> `Asciidoctor::Helpers.normalize_lines_from_string`.
-    lines = block.content.lines
+    # NOTE: use block.lines instead of block.content to avoid issues of auto-generated content e.g. footnotes.
+    # see source code: https://github.com/asciidoctor/asciidoctor/blob/v2.0.23/lib/asciidoctor/block.rb#L98-L129
+    lines = block.lines
     lines.each_with_index do |line, line_index|
       last_char_idx = line.rindex(/[^\r|\n]/)
       last_char = line[last_char_idx]

@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = 'asciidoctor_cjk_breaks'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.summary     = 'Suppress line breaks between east asian characters'
   s.description = 'An extension for Asciidoctor that suppresses line breaks between east asian characters.'
-  s.authors     = ['Kaizhao Zhang']
-  s.email       = 'zhangkaizhao@gmail.com'
+  s.authors     = ['Kaizhao Zhang', 'Kefu Chai']
+  s.email       = ['zhangkaizhao@gmail.com', 'tchaikov@gmail.com']
   s.files       = ['README.adoc',
                    'lib/asciidoctor_cjk_breaks.rb',
                    'lib/asciidoctor/cjk_breaks_treeprocessor.rb',
@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
                    'test/fixtures/cjk_breaks.txt',
                    'test/fixtures/tengwanggexu-wangbo.txt',
                    'test/fixtures/dlist.txt',
+                   'test/fixtures/footnote.txt',
                    'test/fixtures/table.txt']
   s.homepage    = 'https://github.com/zhangkaizhao/asciidoctor_cjk_breaks'
   s.license     = 'MIT'

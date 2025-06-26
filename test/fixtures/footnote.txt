@@ -1,0 +1,8 @@
+wordfootnote:[nota bene a].
+word{empty}footnote:[nota bene b].
+wordfootnote:[nota bene again].
+
+See <<heading>>.
+
+[[heading,Heading]]
+== Headingfootnote:[This is a heading with a footnote]
